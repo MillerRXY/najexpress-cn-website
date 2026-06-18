@@ -15,19 +15,37 @@
 
   <header class="site-header">
     <nav class="navbar">
-      <a href="index.html" class="navbar-logo">
-        <div class="logo-placeholder">NaExpress</div>
-      </a>
+    <a href="index.html" class="navbar-logo">
+      <img src="images/logo/naexpress-logo.png" alt="NaExpress 钠捷能源 Logo">
+    </a>
 
       <div class="navbar-slogan">
         驱动绿色能源未来
       </div>
 
       <ul class="navbar-menu desktop-menu">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="products.html" class="active">产品矩阵</a></li>
-        <li><a href="about.html">关于我们</a></li>
-        <li><a href="index.html#contact" class="nav-contact-btn">联系我们</a></li>
+        <li>
+          <a href="index.html">首页</a>
+        </li>
+
+        <li class="navbar-dropdown">
+          <a href="products.html" class="products-nav-link active">产品矩阵</a>
+
+          <ul class="dropdown-menu">
+            <li><a href="products.html#start-stop-series">汽车启停电池</a></li>
+            <li><a href="products.html#industrial-power-series">工业动力</a></li>
+            <li><a href="products.html#small-power-series">小型动力</a></li>
+            <li><a href="products.html#storage-series">储能系列</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="about.html">关于我们</a>
+        </li>
+
+        <li>
+          <a href="index.html#contact" class="nav-contact-btn">联系我们</a>
+        </li>
       </ul>
 
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="打开导航菜单">
@@ -61,163 +79,176 @@
       <div class="section-divider reveal-divider"></div>
     </section>
 
-    <section class="product-series-heading">  
-      <section id="power-series" class="product-feature-section power-feature reveal" style="--delay: 0.8s;">
-        <div class="product-feature-container">
-          
-          <div class="product-feature-content">
-            <p class="product-feature-label">POWER BATTERY</p>
-            <h2>动力电池</h2>
+    <section id="start-stop-series" class="product-feature-section reveal" style="--delay: 0.8s;">
+      <div class="product-feature-container">
 
-            <p>
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            </p>
+        <div class="product-carousel" data-carousel="start-stop">
+          <button class="carousel-btn carousel-btn-prev" type="button" aria-label="上一张">‹</button>
 
-            <a href="power-battery.html" class="product-feature-btn">
-              了解详情
-            </a>
-          </div>
-
-          <div class="product-carousel" data-carousel="power">
-            <button class="carousel-btn carousel-btn-prev" type="button" aria-label="上一张">
-              ‹
-            </button>
-
-            <div class="carousel-stage">
-              <div class="carousel-item">
-                <img src="images/products/power/xiaojie-1.png" alt="骁捷1号 48V20AH">
-                <span>骁捷1号 48V20AH</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/power/xiaojie-2.png" alt="骁捷2号 60V20AH">
-                <span>骁捷2号 60V20AH</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/power/xiaojie-3.png" alt="骁捷3号 72V20AH">
-                <span>骁捷3号 72V20AH</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/power/f-24.png" alt="骁捷 F-24">
-                <span>骁捷 F-24</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/power/f-36.png" alt="骁捷 F-36">
-                <span>骁捷 F-36</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/power/f-48.png" alt="骁捷 F-48">
-                <span>骁捷 F-48</span>
-              </div>
-            </div>
-            
-            <div class="carousel-dots"></div>
-
-            <button class="carousel-btn carousel-btn-next" type="button" aria-label="下一张">
-              ›
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="start-stop-series" class="product-feature-section product-feature-reverse reveal" style="--delay: 0.2s;">
-        <div class="product-feature-container">
-
-          <div class="product-carousel" data-carousel="start-stop">
-            <button class="carousel-btn carousel-btn-prev" type="button" aria-label="上一张">
-              ‹
-            </button>
-
-            <div class="carousel-stage">
-              <div class="carousel-item">
-                <img src="images/products/start-stop/h5.png" alt="骁捷 H5">
-                <span>骁捷 H5</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/start-stop/h6.png" alt="骁捷 H6">
-                <span>骁捷 H6</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/start-stop/h7.png" alt="骁捷 H7">
-                <span>骁捷 H7</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/start-stop/h8.png" alt="骁捷 H8">
-                <span>骁捷 H8</span>
-              </div>
-
-              <div class="carousel-item">
-                <img src="images/products/start-stop/h9.png" alt="骁捷 H9">
-                <span>骁捷 H9</span>
-              </div>
+          <div class="carousel-stage">
+            <div class="carousel-item">
+              <img src="images/products/start-stop/h-5.png" alt="骁捷 H5">
+              <span>骁捷 H5</span>
             </div>
 
-            <div class="carousel-dots"></div>
+            <div class="carousel-item">
+              <img src="images/products/start-stop/h-6.png" alt="骁捷 H6">
+              <span>骁捷 H6</span>
+            </div>
 
-            <button class="carousel-btn carousel-btn-next" type="button" aria-label="下一张">
-              ›
-            </button>
-          </div>
+            <div class="carousel-item">
+              <img src="images/products/start-stop/h-7.png" alt="骁捷 H7">
+              <span>骁捷 H7</span>
+            </div>
 
-          <div class="product-feature-content">
-            <p class="product-feature-label">START-STOP BATTERY</p>
-            <h2>汽车启停电池</h2>
+            <div class="carousel-item">
+              <img src="images/products/start-stop/h-8.png" alt="骁捷 H8">
+              <span>骁捷 H8</span>
+            </div>
 
-            <p>
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            </p>
-
-            <a href="start-stop-battery.html" class="product-feature-btn">
-              了解详情
-            </a>
-          </div>
-
-        </div>
-      </section>
-      
-      <section id="storage-series" class="product-feature-section storage-feature reveal" style="--delay: 0.2s;">
-        <div class="product-feature-container">
-
-          <div class="product-feature-content">
-            <p class="product-feature-label">ENERGY STORAGE</p>
-            <h2>储能系列</h2>
-
-            <p>
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            </p>
-
-            <a href="energy-storage.html" class="product-feature-btn">
-              了解详情
-            </a>
-          </div>
-
-          <div class="product-carousel product-carousel-single" data-carousel="storage">
-            <div class="carousel-stage">
-              <div class="carousel-item">
-                <img src="images/products/storage/fs.png" alt="骁捷 FS">
-                <span>骁捷 FS</span>
-              </div>
+            <div class="carousel-item">
+              <img src="images/products/start-stop/h-9.png" alt="骁捷 H9">
+              <span>骁捷 H9</span>
             </div>
           </div>
 
+          <div class="carousel-dots"></div>
+
+          <button class="carousel-btn carousel-btn-next" type="button" aria-label="下一张">›</button>
         </div>
-      </section>
+
+        <div class="product-feature-content">
+          <p class="product-feature-label">START-STOP BATTERY</p>
+          <h2>汽车启停电池</h2>
+
+          <p>
+            汽车启停电池系列面向车辆启动、电源辅助与铅酸电池替代场景，
+            适用于对安全性、瞬时输出能力和稳定循环表现有要求的汽车电源系统。
+            该系列产品可为车辆提供更可靠的启动支持与更轻量化的能源选择。
+          </p>
+
+          <a href="start-stop-battery.html" class="product-feature-btn">查看更多</a>
+        </div>
+
+      </div>
     </section>
 
+    <section id="industrial-power-series" class="product-feature-section reveal" style="--delay: 0.2s;">
+      <div class="product-feature-container">
+
+        <div class="product-feature-content">
+          <p class="product-feature-label">INDUSTRIAL POWER</p>
+          <h2>工业动力</h2>
+
+          <p>
+            工业动力系列面向叉车、工程设备、移动作业平台等应用场景，
+            提供稳定、安全、耐用的钠离子电池解决方案。
+            该系列适合高频率使用、重载运行以及工业场景中的铅酸电池替代需求。
+          </p>
+
+          <a href="industrial-power.html" class="product-feature-btn">查看更多</a>
+        </div>
+
+        <div class="product-carousel" data-carousel="industrial-power">
+          <button class="carousel-btn carousel-btn-prev" type="button" aria-label="上一张">‹</button>
+
+          <div class="carousel-stage">
+            <div class="carousel-item">
+              <img src="images/products/power/f-24.png" alt="骁捷 F-24">
+              <span>骁捷 F-24</span>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/products/power/f-36.png" alt="骁捷 F-36">
+              <span>骁捷 F-36</span>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/products/power/f-48.png" alt="骁捷 F-48">
+              <span>骁捷 F-48</span>
+            </div>
+          </div>
+
+          <div class="carousel-dots"></div>
+
+          <button class="carousel-btn carousel-btn-next" type="button" aria-label="下一张">›</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="small-power-series" class="product-feature-section reveal" style="--delay: 0.2s;">
+      <div class="product-feature-container">
+
+        <div class="product-carousel" data-carousel="small-power">
+          <button class="carousel-btn carousel-btn-prev" type="button" aria-label="上一张">‹</button>
+
+          <div class="carousel-stage">
+            <div class="carousel-item">
+              <img src="images/products/small-power/xiaojie-1.png" alt="骁捷1号 48V20AH">
+              <span>骁捷1号 48V20AH</span>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/products/small-power/xiaojie-2.png" alt="骁捷2号 60V20AH">
+              <span>骁捷2号 60V20AH</span>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/products/small-power/xiaojie-3.png" alt="骁捷3号 72V20AH">
+              <span>骁捷3号 72V20AH</span>
+            </div>
+          </div>
+
+          <div class="carousel-dots"></div>
+
+          <button class="carousel-btn carousel-btn-next" type="button" aria-label="下一张">›</button>
+        </div>
+
+        <div class="product-feature-content">
+          <p class="product-feature-label">SMALL POWER</p>
+          <h2>小型动力</h2>
+
+          <p>
+            小型动力系列面向电动自行车、三轮车、四轮低速车等轻型出行场景，
+            兼顾轻量化、续航能力与安全性能。
+            该系列为日常交通、城市短途出行与轻型动力设备提供可靠电力支持。
+          </p>
+
+          <a href="small-power.html" class="product-feature-btn">查看更多</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="storage-series" class="product-feature-section reveal" style="--delay: 0.2s;">
+      <div class="product-feature-container">
+
+        <div class="product-feature-content">
+          <p class="product-feature-label">ENERGY STORAGE</p>
+          <h2>储能系列</h2>
+
+          <p>
+            储能系列面向家庭储能、商业能源、工业备电与分布式能源应用场景，
+            通过稳定、安全、长寿命的钠离子电池系统，为用户提供持续可靠的能源支持。
+          </p>
+
+          <a href="storage-series.html" class="product-feature-btn">查看更多</a>
+        </div>
+
+        <div class="product-carousel product-carousel-single" data-carousel="storage">
+          <div class="carousel-stage">
+            <div class="carousel-item">
+              <img src="images/products/storage/fs-4850.png" alt="骁捷 FS">
+              <span>FS4850</fs-4850>
+            </div>
+          </div>
+
+          <div class="carousel-dots"></div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <script src="js/main.js"></script>

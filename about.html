@@ -15,19 +15,37 @@
 
   <header class="site-header">
     <nav class="navbar">
-      <a href="index.html" class="navbar-logo">
-        <div class="logo-placeholder">NaExpress</div>
-      </a>
+    <a href="index.html" class="navbar-logo">
+      <img src="images/logo/naexpress-logo.png" alt="NaExpress 钠捷能源 Logo">
+    </a>
 
       <div class="navbar-slogan">
         驱动绿色能源未来
       </div>
 
       <ul class="navbar-menu desktop-menu">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="products.html">产品矩阵</a></li>
-        <li><a href="about.html" class="active">关于我们</a></li>
-        <li><a href="index.html#contact" class="nav-contact-btn">联系我们</a></li>
+        <li>
+          <a href="index.html">首页</a>
+        </li>
+
+        <li class="navbar-dropdown">
+          <a href="products.html" class="products-nav-link">产品矩阵</a>
+
+          <ul class="dropdown-menu">
+            <li><a href="products.html#start-stop-series">汽车启停电池</a></li>
+            <li><a href="products.html#industrial-power-series">工业动力</a></li>
+            <li><a href="products.html#small-power-series">小型动力</a></li>
+            <li><a href="products.html#storage-series">储能系列</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="about.html">关于我们</a>
+        </li>
+
+        <li>
+          <a href="index.html#contact" class="nav-contact-btn">联系我们</a>
+        </li>
       </ul>
 
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="打开导航菜单">
