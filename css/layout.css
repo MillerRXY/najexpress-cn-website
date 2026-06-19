@@ -286,7 +286,7 @@
 }
 
 .navbar-logo img {
-  height: 46px;
+  height: 70px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -373,7 +373,7 @@
 /* 手机端只显示普通导航，不显示桌面下拉 */
 @media (max-width: 768px) {
   .navbar-logo img {
-    height: 42px;
+    height: 70px;
   }
 
   .dropdown-menu {
