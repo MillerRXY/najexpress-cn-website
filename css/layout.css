@@ -1,3 +1,13 @@
+/* ==============================
+   Header Layout
+   顶部导航栏基础布局
+   ============================== */
+
+/* 
+  全站顶部导航容器。
+  普通页面使用 sticky 固定在顶部；
+  首页会在后面通过 .home-page 单独改成 fixed 透明导航。
+*/
 .site-header {
   width: 100%;
   background-color: #d7e8fb;
@@ -7,6 +17,10 @@
   z-index: 1000;
 }
 
+/* 
+  导航栏内部布局：
+  左侧 logo，中间 slogan，右侧菜单。
+*/
 .navbar {
   max-width: 1180px;
   height: 78px;
@@ -19,28 +33,22 @@
   gap: 24px;
 }
 
+/* Logo 图片容器 */
 .navbar-logo {
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
-.logo-placeholder {
-  height: 48px;
-  min-width: 170px;
-  padding: 0 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #073b78;
-  color: #ffffff;
-  border-radius: 6px;
-
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -1px;
+/* Logo 图片尺寸 */
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
+/* 导航栏中间 slogan */
 .navbar-slogan {
   flex: 1;
   font-size: 18px;
@@ -52,12 +60,14 @@
   letter-spacing: 1px;
 }
 
+/* 桌面端菜单布局 */
 .navbar-menu {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
+/* 桌面端菜单文字 */
 .navbar-menu a {
   font-size: 15px;
   font-weight: 600;
@@ -66,7 +76,8 @@
   position: relative;
 }
 
-.navbar-menu a::after {
+/* 菜单 hover / active 下划线 */
+.navbar-menu > li > a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -78,11 +89,21 @@
   transition: width 0.25s ease;
 }
 
-.navbar-menu a:hover::after,
-.navbar-menu a.active::after {
+.navbar-menu > li > a:hover::after,
+.navbar-menu > li > a.active::after {
   width: 100%;
 }
 
+
+/* ==============================
+   Mobile Menu Button
+   手机端菜单按钮
+   ============================== */
+
+/* 
+  手机端左上角三横线按钮。
+  默认桌面端隐藏，在 768px 以下显示。
+*/
 .mobile-menu-btn {
   display: none;
   width: 42px;
@@ -98,6 +119,7 @@
   z-index: 1200;
 }
 
+/* 三横线样式 */
 .mobile-menu-btn span {
   display: block;
   width: 28px;
@@ -107,6 +129,16 @@
   border-radius: 999px;
 }
 
+
+/* ==============================
+   Mobile Menu Overlay
+   手机端展开菜单
+   ============================== */
+
+/* 
+  手机端菜单遮罩层。
+  默认隐藏在页面上方，通过 JS 添加 .show 后滑入。
+*/
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -126,12 +158,14 @@
   transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
+/* 手机菜单打开状态 */
 .mobile-menu-overlay.show {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
 
+/* 手机菜单关闭按钮 */
 .mobile-menu-close {
   border: none;
   background: transparent;
@@ -142,6 +176,7 @@
   margin-bottom: 36px;
 }
 
+/* 手机菜单列表 */
 .mobile-menu-list {
   width: 100%;
 }
@@ -150,6 +185,11 @@
   border-bottom: 1px solid #eeeeee;
 }
 
+.mobile-menu-list li:last-child {
+  border-bottom: none;
+}
+
+/* 手机菜单链接 */
 .mobile-menu-list a {
   display: block;
   width: 100%;
@@ -160,15 +200,25 @@
   color: #777777;
 }
 
+/* 手机菜单底部品牌文字 */
 .mobile-menu-brand {
   margin-top: 48px;
   text-align: center;
   font-size: 24px;
   font-weight: 800;
-  color: #6d4ca3;
+  color: #073b78;
   letter-spacing: 1px;
 }
 
+/* ==============================
+   Responsive Header
+   手机端导航适配
+   ============================== */
+
+/* 
+  平板和手机端：
+  隐藏桌面菜单和 slogan，只保留居中的 logo 与左侧菜单按钮。
+*/
 @media (max-width: 768px) {
   .site-header {
     position: sticky;
@@ -188,12 +238,6 @@
     transform: translateX(-50%);
   }
 
-  .logo-placeholder {
-    height: 44px;
-    min-width: 158px;
-    font-size: 24px;
-  }
-
   .navbar-slogan,
   .desktop-menu {
     display: none;
@@ -204,13 +248,11 @@
   }
 }
 
+/* 
+  小屏手机端：
+  进一步压缩菜单按钮位置和菜单文字大小。
+*/
 @media (max-width: 480px) {
-  .logo-placeholder {
-    height: 40px;
-    min-width: 145px;
-    font-size: 22px;
-  }
-
   .mobile-menu-btn {
     top: 17px;
     left: 16px;
@@ -231,6 +273,12 @@
   }
 }
 
+/* ==============================
+   Contact Button
+   导航栏联系我们按钮
+   ============================== */
+
+/* 桌面端右侧“联系我们”按钮 */
 .navbar-menu .nav-contact-btn {
   padding: 10px 20px;
   color: #ffffff;
@@ -243,20 +291,19 @@
     box-shadow 0.25s ease;
 }
 
+/* 联系我们按钮不需要下划线动画 */
 .navbar-menu .nav-contact-btn::after {
   display: none;
 }
 
+/* 桌面端联系我们按钮 hover */
 .navbar-menu .nav-contact-btn:hover {
   background-color: #0a5fb4;
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(7, 59, 120, 0.3);
 }
 
-.mobile-menu-list li:last-child {
-  border-bottom: none;
-}
-
+/* 手机菜单里的“联系我们”按钮 */
 .mobile-menu-list a.mobile-contact-btn {
   display: inline-flex;
   align-items: center;
@@ -279,20 +326,10 @@
   background-color: #0a5fb4;
 }
 
-.navbar-logo {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.navbar-logo img {
-  height: 70px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-/* 产品矩阵下拉菜单 */
+/* ==============================
+   Product Dropdown Menu
+   产品矩阵下拉菜单
+   ============================== */
 .navbar-dropdown {
   position: relative;
 }
@@ -349,6 +386,8 @@
   font-weight: 500;
   white-space: nowrap;
 
+  position: relative;
+
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
@@ -357,6 +396,23 @@
 .dropdown-menu a:hover {
   color: #073b78;
   background-color: #f4f8fc;
+}
+
+.dropdown-menu a::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 7px;
+
+  width: 0;
+  height: 2px;
+  background-color: #073b78;
+
+  transition: width 0.25s ease;
+}
+
+.dropdown-menu a:hover::after {
+  width: calc(100% - 40px);
 }
 
 /* 防止鼠标从产品矩阵移动到下拉菜单时中断 */
@@ -383,4 +439,94 @@
   .navbar-dropdown > a::after {
     display: none;
   }
+}
+
+/* 首页导航栏：顶部覆盖在 Hero 图上，滚动后变回不透明 */
+.home-page .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(222, 236, 250, 0.25);
+  border-bottom: 1px solid rgba(20, 52, 90, 0.08);
+  box-shadow: none;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.home-page .site-header.header-solid {
+  background-color: #deecfa;
+  border-bottom: 1px solid rgba(20, 52, 90, 0.12);
+  box-shadow: 0 6px 18px rgba(7, 31, 61, 0.08);
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* 首页 Hero 补偿固定导航高度 */
+.home-page .hero-section {
+  min-height: 100vh;
+  padding-top: 78px;
+}
+
+/* 首页顶部透明状态：导航文字变白 */
+.home-page .navbar-slogan {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.home-page .site-header:not(.header-solid) .navbar-slogan,
+.home-page .site-header:not(.header-solid) .navbar-menu > li > a {
+  color: #ffffff;
+}
+
+/* 鼠标停在产品矩阵下拉区域时，顶部产品矩阵保持下划线 */
+.navbar-dropdown:hover > a::after {
+  width: 100%;
+}
+
+/* 首页顶部透明状态：产品矩阵下划线也变白 */
+.home-page .site-header:not(.header-solid) .navbar-menu > li > a::after {
+  background-color: #ffffff;
+}
+
+/* 首页顶部透明状态：联系我们按钮保持深蓝底，更清楚 */
+.home-page .site-header:not(.header-solid) .navbar-menu .nav-contact-btn {
+  color: #ffffff;
+  background-color: #073b78;
+}
+
+/* 滚动后：恢复深蓝文字 */
+.home-page .site-header.header-solid .navbar-slogan,
+.home-page .site-header.header-solid .navbar-menu > li > a {
+  color: #14345a;
+}
+
+/* 滚动后：下划线恢复深蓝 */
+.home-page .site-header.header-solid .navbar-menu > li > a::after {
+  background-color: #073b78;
+}
+
+/* 滚动后：联系我们按钮保持原样 */
+.home-page .site-header.header-solid .navbar-menu .nav-contact-btn {
+  color: #ffffff;
+  background-color: #073b78;
+}
+
+/* 首页最顶部透明状态：隐藏 slogan */
+.home-page .site-header:not(.header-solid) .navbar-slogan {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* 首页滚动后：显示 slogan */
+.home-page .site-header.header-solid .navbar-slogan {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }

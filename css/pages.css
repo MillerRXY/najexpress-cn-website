@@ -1,3 +1,7 @@
+/* ==============================
+   Home Hero Section
+   首页主视觉区域
+   ============================== */
 .hero-section {
   position: relative;
   min-height: calc(100vh - 78px);
@@ -128,6 +132,10 @@
   }
 }
 
+/* ==============================
+   Home Intro Section
+   首页公司介绍区域
+   ============================== */
 .intro-section {
   padding: 90px 24px;
   background-color: #ffffff;
@@ -175,6 +183,10 @@
   color: #071f3d;
 }
 
+/* ==============================
+   Scroll Reveal Animation
+   滚动进入视口动画
+   ============================== */
 .reveal {
   opacity: 0;
   transition:
@@ -232,6 +244,10 @@
   }
 }
 
+/* ==============================
+   Home Applications Section
+   首页应用领域区域
+   ============================== */
 .support-section {
   padding: 90px 24px;
   background-color: #ffffff;
@@ -325,36 +341,6 @@
   box-shadow: none;
 }
 
-.support-image-placeholder {
-  width: 100%;
-  height: 210px;
-  margin-bottom: 26px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(135deg, #f0f3f7, #dfe5ec);
-  border: 1px dashed #b8c2cf;
-  color: #7b8794;
-
-  font-size: 14px;
-}
-
-.support-card h3 {
-  margin-bottom: 14px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #071f3d;
-}
-
-.support-card p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #4f5f73;
-}
-
 @media (max-width: 900px) {
   .support-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -387,118 +373,12 @@
   .support-card {
     padding: 24px 20px 28px;
   }
-
-  .support-image-placeholder {
-    height: 220px;
-  }
 }
 
-.transition-section {
-  padding: 90px 24px;
-  background-color: #ffffff;
-}
-
-.transition-container {
-  max-width: 1080px;
-  margin: 0 auto;
-}
-
-.transition-list {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
-}
-
-.transition-item {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  align-items: center;
-  gap: 42px;
-}
-
-.transition-image-placeholder {
-  width: 100%;
-  height: 260px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(135deg, #f0f3f7, #dfe5ec);
-  border: 1px dashed #b8c2cf;
-  color: #7b8794;
-  font-size: 14px;
-}
-
-.transition-content h3 {
-  margin-bottom: 18px;
-  font-size: 21px;
-  line-height: 1.35;
-  font-weight: 800;
-  color: #071f3d;
-}
-
-.transition-content p {
-  margin-bottom: 18px;
-  font-size: 15px;
-  line-height: 1.8;
-  color: #4f5f73;
-}
-
-.transition-link {
-  display: inline-block;
-  font-size: 15px;
-  color: #073b78;
-  border-bottom: 1px solid #073b78;
-}
-
-.transition-link:hover {
-  color: #0a5fb4;
-  border-color: #0a5fb4;
-}
-
-.transition-item.reveal {
-  opacity: 0;
-  transform: translateY(42px);
-
-  transition:
-    opacity 0.9s ease var(--delay, 0s),
-    transform 0.9s ease var(--delay, 0s);
-}
-
-.transition-item.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .transition-section {
-    padding: 64px 22px;
-  }
-
-  .transition-list {
-    gap: 44px;
-  }
-
-  .transition-item {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .transition-image-placeholder {
-    height: 230px;
-  }
-
-  .transition-content h3 {
-    font-size: 20px;
-  }
-
-  .transition-content p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-}
-
+/* ==============================
+   Product Matrix Page
+   产品矩阵页面基础布局
+   ============================== */
 .product-series-heading {
   padding: 70px 24px 46px;
   background-color: #ffffff;
@@ -604,6 +484,10 @@
   box-shadow: 0 14px 30px rgba(7, 59, 120, 0.22);
 }
 
+/* ==============================
+   Product Carousel
+   产品轮播图
+   ============================== */
 .product-carousel {
   position: relative;
   min-height: 430px;
@@ -744,10 +628,12 @@
 
   .product-feature-content {
     text-align: center;
+    order: 1;
   }
 
   .product-carousel {
     min-height: 390px;
+    order: 2;
   }
 
   .carousel-stage {
@@ -829,15 +715,6 @@
   }
 }
 
-
-.product-feature-reverse {
-  background-color: #f4f8fc;
-}
-
-.storage-feature {
-  background-color: #ffffff;
-}
-
 .product-carousel-single .carousel-item {
   opacity: 1;
   z-index: 3;
@@ -846,20 +723,7 @@
   box-shadow: 0 22px 50px rgba(7, 31, 61, 0.16);
 }
 
-@media (max-width: 900px) {
-  .product-feature-container {
-    grid-template-columns: 1fr;
-  }
-
-  .product-feature-content {
-    order: 1;
-  }
-
-  .product-carousel {
-    order: 2;
-  }
-}
-
+/* Carousel Dots / 轮播指示点 */
 .carousel-dots {
   position: absolute;
   left: 50%;
@@ -902,6 +766,7 @@
   background-color: #0a5fb4;
 }
 
+/* Product Section Backgrounds / 产品区块背景色 */
 #start-stop-series {
   background-color: #f4f8fc;
 }
@@ -919,8 +784,8 @@
 }
 
 /* ==============================
-   Industrial Power Detail Page
-   工业动力详情页
+   Product Detail Pages
+   产品详情页通用样式
    ============================== */
 
 .industrial-detail-section {
@@ -935,7 +800,7 @@
   display: block;
 }
 
-/* 工业动力标题：在灰线和产品内容上方，靠左，不跟随滚动 */
+/* 页面大标题：位于产品列表上方 */
 .industrial-page-heading {
   margin-bottom: 64px;
 }
@@ -955,7 +820,7 @@
   width: 100%;
 }
 
-/* 单个产品块：左侧 F-24 + 灰线，右侧产品内容 */
+/* 单个产品块：左侧型号标记 + 灰线，右侧产品内容 */
 .industrial-product-row {
   display: grid;
   grid-template-columns: 190px minmax(0, 1fr);
@@ -977,7 +842,7 @@
   transform: translateY(0);
 }
 
-/* F-24 和灰线：属于当前产品，跟着当前产品一起移动 */
+/* 左侧型号标记和竖线：跟随当前产品区域滚动 */
 .industrial-product-marker {
   position: sticky;
   top: 120px;
@@ -1100,15 +965,15 @@
 }
 
 .product-detail-spec-image img {
-  width: 86%;
-  max-width: 720px;
+  width: 78%;
+  max-width: 660px;
   height: auto;
   display: block;
   object-fit: contain;
   border-radius: 14px;
 }
 
-/* 手机端：不显示工业动力标题、F-24 和灰线，直接展示内容 */
+/* 手机端：隐藏页面大标题、型号标记和竖线，直接展示产品内容 */
 @media (max-width: 768px) {
   .industrial-detail-section {
     padding: 56px 22px 90px;
@@ -1274,59 +1139,22 @@
 
 .contact-address {
   max-width: 760px;
-  margin: 0 auto 34px;
+  margin: 28px auto 34px;
+  text-align: center;
 }
 
 .contact-address p {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
   margin: 0;
   font-size: 16px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.72);
 }
 
-.contact-address i {
-  color: rgba(255, 255, 255, 0.88);
+.contact-postcode {
+  margin-top: 8px;
 }
 
-.contact-socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-}
-
-.contact-socials a {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #073b78;
-  background-color: rgba(255, 255, 255, 0.86);
-
-  font-size: 15px;
-
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    color 0.25s ease;
-}
-
-.contact-socials a:hover {
-  transform: translateY(-4px);
-  background-color: #ffffff;
-  color: #0a5fb4;
-}
-
-/* 二维码区域 */
+/* Contact QR Codes / 二维码区域 */
 .contact-qr-container {
   max-width: 860px;
   margin: 0 auto 34px;
@@ -1386,6 +1214,7 @@
   box-shadow: none;
 }
 
+
 /* 二维码下面文字 */
 .contact-qr-card p {
   width: 330px;
@@ -1403,7 +1232,7 @@
   color: #6f7b8a;
 }
 
-/* 手机端 */
+/* Contact Mobile Layout / 联系我们区域手机端适配 */
 @media (max-width: 768px) {
   .contact-section {
     padding: 120px 22px 42px;
@@ -1438,12 +1267,6 @@
   .contact-address p {
     font-size: 14px;
     text-align: center;
-  }
-
-  .contact-socials a {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
   }
 
   .contact-qr-container {

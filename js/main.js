@@ -155,3 +155,19 @@ productCarousels.forEach(function (carousel) {
     startAutoPlay();
   }
 });
+
+// 首页导航栏：顶部半透明，滚动后不透明
+const homeHeader = document.querySelector(".home-page .site-header");
+
+if (homeHeader) {
+  function updateHomeHeader() {
+    if (window.scrollY > 20) {
+      homeHeader.classList.add("header-solid");
+    } else {
+      homeHeader.classList.remove("header-solid");
+    }
+  }
+
+  updateHomeHeader();
+  window.addEventListener("scroll", updateHomeHeader);
+}
